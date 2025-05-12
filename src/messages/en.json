@@ -1,0 +1,17 @@
+{
+    "forms": {
+        "login": {
+            "loginTitle": "Sign In",
+            "loginDescription": "Enter your credentials to access your account.",
+            "email": "Email",
+            "emailPlaceholder": "Enter your email",
+            "password": "Password",
+            "passwordPlaceholder": "Enter your password",
+            "rememberMe": "Remember me",
+            "submit": "Sign In",
+            "forgotPassword": "Forgot password?",
+            "createAccount": "Don't have an account?",
+            "register": "Register"
+        }
+    }
+}

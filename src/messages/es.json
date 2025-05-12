@@ -1,0 +1,17 @@
+{
+    "forms": {
+        "login": {
+            "loginTitle": "Iniciar sesión",
+            "loginDescription": "Ingrese sus credenciales para acceder a su cuenta.",
+            "email": "Correo electrónico",
+            "emailPlaceholder": "Ingrese su correo electrónico",
+            "password": "Contraseña",
+            "passwordPlaceholder": "Ingrese su contraseña",
+            "rememberMe": "Recuérdame",
+            "submit": "Iniciar sesión",
+            "forgotPassword": "¿Olvidaste tu contraseña?",
+            "createAccount": "¿No tienes una cuenta?",
+            "register": "Registrarse"
+        }
+    }
+}
