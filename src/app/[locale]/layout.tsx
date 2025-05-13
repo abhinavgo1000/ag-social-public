@@ -1,27 +1,26 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { NextIntlClientProvider } from 'next-intl';
-import { notFound } from 'next/navigation';
-import { ChakraProvider } from '@chakra-ui/react';
-
+import {NextIntlClientProvider, hasLocale} from 'next-intl';
+import {notFound} from 'next/navigation';
+import {routing} from '@/i18n/routing';
+import { StyleProvider } from '@/components/ui/provider';
+ 
 export default async function LocaleLayout({
     children,
-    params,
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-    let messages;
-    try {
-        messages = (await import(`@/messages/${params.locale}.json`)).default;
-    } catch (error) {
+    params
+} : {
+    children: React.ReactNode;
+    params: Promise<{locale: string}>;
+    }) {
+    // Ensure that the incoming `locale` is valid
+    const {locale} = await params;
+    if (!hasLocale(routing.locales, locale)) {
         notFound();
     }
-
+    
     return (
-        <NextIntlClientProvider messages={messages}>
-            <ChakraProvider>
+        <NextIntlClientProvider locale={locale}>
+            <StyleProvider>
                 {children}
-            </ChakraProvider>
+            </StyleProvider>
         </NextIntlClientProvider>
     );
 }
