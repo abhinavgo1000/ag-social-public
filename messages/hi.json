@@ -1,0 +1,17 @@
+{
+    "forms": {
+        "login": {
+            "loginTitle": "लॉगिन करें",
+            "loginDescription": "अपने खाते में प्रवेश करने के लिए अपनी क्रेडेंशियल्स दर्ज करें।",
+            "email": "ईमेल",
+            "emailPlaceholder": "अपना ईमेल दर्ज करें",
+            "password": "पासवर्ड",
+            "passwordPlaceholder": "अपना पासवर्ड दर्ज करें",
+            "rememberMe": "मुझे याद रखें",
+            "submit": "लॉगिन करें",
+            "forgotPassword": "क्या आप अपना पासवर्ड भूल गए?",
+            "createAccount": "क्या आपके पास खाता नहीं है?",
+            "register": "रजिस्टर करें"
+        }
+    }
+}
