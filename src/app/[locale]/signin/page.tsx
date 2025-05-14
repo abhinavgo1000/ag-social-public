@@ -93,6 +93,8 @@ function SignInPage() {
                         <Checkbox.Label>{t('forms.login.rememberMe')}</Checkbox.Label>
                     </Checkbox.Root>
                     <Button type='submit' onClick={handleSubmit}>{t('forms.login.submit')}</Button>
+                    <Button variant='outline' onClick={() => signIn('google')}>{t('forms.login.googleSignIn')}</Button>
+                    <Button variant='outline' onClick={() => signIn('github')}>{t('forms.login.facebookSignIn')}</Button>
                     <Link href='/reset-password'>{t('forms.login.forgotPassword')}</Link>
                     <Text>
                         {t('forms.login.createAccount')} <Link href='/register'>{t('forms.login.register')}</Link>

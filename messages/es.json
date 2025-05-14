@@ -9,6 +9,8 @@
             "passwordPlaceholder": "Ingrese su contraseña",
             "rememberMe": "Recuérdame",
             "submit": "Iniciar sesión",
+            "googleSignIn": "Iniciar sesión con Google",
+            "facebookSignIn": "Iniciar sesión con Facebook",
             "forgotPassword": "¿Olvidaste tu contraseña?",
             "createAccount": "¿No tienes una cuenta?",
             "register": "Registrarse"

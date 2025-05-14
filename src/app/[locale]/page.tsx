@@ -2,7 +2,8 @@ import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/api/auth/[...nextauth]';
 import { redirect } from 'next/navigation';
 
-export default async function Home({ params }: { params: { locale: string } }) {
+export default async function Home(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
 
   const session = await getServerSession(authOptions);
 

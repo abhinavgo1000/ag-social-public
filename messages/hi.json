@@ -9,6 +9,8 @@
             "passwordPlaceholder": "अपना पासवर्ड दर्ज करें",
             "rememberMe": "मुझे याद रखें",
             "submit": "लॉगिन करें",
+            "googleSignIn": "गूगल से लॉगिन करें",
+            "facebookSignIn": "फेसबुक से लॉगिन करें",
             "forgotPassword": "क्या आप अपना पासवर्ड भूल गए?",
             "createAccount": "क्या आपके पास खाता नहीं है?",
             "register": "रजिस्टर करें"

@@ -1,6 +1,8 @@
 import NextAuth from 'next-auth';
 import { JWT } from 'next-auth/jwt';
 import CredentialsProvider from 'next-auth/providers/credentials';
+import GoogleProvider from 'next-auth/providers/google';
+import FacebookProvider from 'next-auth/providers/facebook';
 
 // Extend the Session and User types to include accessToken and id
 declare module 'next-auth' {
@@ -44,6 +46,14 @@ export const authOptions = {
                 return null;
             }
         }),
+        GoogleProvider({
+            clientId: process.env.GOOGLE_CLIENT_ID!,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+        }),
+        FacebookProvider({
+            clientId: process.env.FACEBOOK_CLIENT_ID!,
+            clientSecret: process.env.FACEBOOK_CLIENT_SECRET!,
+        }),
     ],
     session: {
         strategy: 'jwt' as const, // Use JWT for session
@@ -71,4 +81,4 @@ export const authOptions = {
     },
 };
 
-export default NextAuth(authOptions);
+export const {auth, handlers: {GET, POST}} = NextAuth(authOptions);
