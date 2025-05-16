@@ -27,15 +27,6 @@ function SignInPage() {
     const handleSubmit = async (e: React.FormEvent) => {
         if (isSubmitting) return; // Prevent multiple submissions
 
-        if (email === '' || password === '') {
-            if (email === '') {
-                setEmailError(t('errors.validation.required', { field: t('forms.login.email') }));
-            }
-            if (password === '') {
-                setPasswordError(t('errors.validation.required', { field: t('forms.login.password') }));
-            }
-            return;
-        }
         setIsSubmitting(true);
         setEmailError(null); // Reset error state
         setPasswordError(null); // Reset error state
@@ -47,7 +38,13 @@ function SignInPage() {
             callbackUrl: params.get('callbackUrl') || '/dashboard',
         });
         if (res?.error) {
-            setError('Invalid username or password');
+            if (email === '') {
+                setEmailError(t('errors.validation.required', { field: t('forms.login.email') }));
+            }
+            if (password === '') {
+                setPasswordError(t('errors.validation.required', { field: t('forms.login.password') }));
+            }
+            return;
         } else if (res?.ok) {
             router.push(res.url || '/dashboard');
         }
