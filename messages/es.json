@@ -1,4 +1,13 @@
 {
+    "menu": {
+        "home": "Inicio",
+        "profile": "Perfil",
+        "forYou": "Para ti",
+        "settings": "Configuración",
+        "logout": "Cerrar sesión",
+        "toggle": "Alternar navegación lateral"
+    },
+    "greeting": "¡Hola, {{name}}!",
     "forms": {
         "login": {
             "loginTitle": "Iniciar sesión",

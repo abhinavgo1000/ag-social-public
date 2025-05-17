@@ -1,4 +1,13 @@
 {
+    "menu": {
+        "home": "Home",
+        "profile": "Profile",
+        "forYou": "For You",
+        "settings": "Settings",
+        "logout": "Logout",
+        "toggle": "Toggle Side Navigation"
+    },
+    "greeting": "Hello, {{name}}!",
     "forms": {
         "login": {
             "loginTitle": "Sign In",

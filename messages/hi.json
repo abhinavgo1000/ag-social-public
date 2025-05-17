@@ -1,4 +1,13 @@
 {
+    "menu" : {
+        "home": "घर",
+        "profile": "प्रोफ़ाइल",
+        "forYou": "आपके लिए",
+        "settings": "सेटिंग्स",
+        "logout": "लॉगआउट",
+        "toggle": "साइड नेविगेशन टॉगल करें"
+    },
+    "greeting": "नमस्ते, {{name}}!",
     "forms": {
         "login": {
             "loginTitle": "लॉगिन करें",
