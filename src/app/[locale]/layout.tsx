@@ -1,7 +1,6 @@
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { StyleProvider } from '@/components/ui/provider';
  
 export default async function LocaleLayout(
     props: {
@@ -23,9 +22,7 @@ export default async function LocaleLayout(
 
     return (
         <NextIntlClientProvider locale={locale}>
-            <StyleProvider>
-                {children}
-            </StyleProvider>
+            {children}
         </NextIntlClientProvider>
     );
 }
